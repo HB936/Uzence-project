@@ -88,7 +88,7 @@ const Template: StoryFn<typeof Accordion> = (args) => <Accordion {...args} />;
 export const Default = Template.bind({});
 Default.args = {
     title: 'Hello Accordion',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulu',
     variant: 'default'
 };
 
