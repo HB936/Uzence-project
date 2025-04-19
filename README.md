@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# React + TailwindCSS Component Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple, responsive UI component showcase built using **React**, **TypeScript**, **Tailwind CSS**, and **Storybook**. The project includes reusable components like **Badge** and **Accordion**, along with comprehensive Storybook documentation and examples.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Reusable and maintainable component structure  
+- Tailwind CSS utility-first styling  
+- TypeScript for type safety  
+- Fully responsive layout  
+- Storybook for isolated component development and documentation  
+- Smooth animations for interactive components  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Components Included
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. Badge
+A small, contextual label to indicate statuses or categories.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Variants supported:**
+- `primary`
+- `success`
+- `error`
+- `warning`
+- `default`
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+**Use Cases:**
+- Displaying status tags like "New", "Active", "Beta"
+- Indicating success, error, or warning messages
+
+### 2. Accordion
+A collapsible section to show and hide content dynamically.
+
+**Features:**
+- Smooth transition using `max-height`, `translate-y`, and `opacity`
+- Internally controlled state (`isOpen`)
+- Responsive layout and animation
+
+**Use Cases:**
+- Frequently Asked Questions (FAQs)
+- Toggleable content sections
+- Progressive disclosure of UI
+
+---
+
+## Project Structure
+
+project-root/
+├── components/
+│   ├── Badge.tsx
+│   └── Accordion.tsx
+│   └── Layout.tsx
+├── stories/
+│   ├── Badge.stories.tsx
+│   └── Accordion.stories.tsx
+├── App.tsx
+├── index.css
+├── tailwind.config.js
+├── tsconfig.json
+├── package.json
+└── README.md
